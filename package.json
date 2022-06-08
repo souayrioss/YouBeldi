@@ -1,0 +1,24 @@
+{
+  "name": "youbeldi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "tailwindcss -i ./Public/css/tailwind.css -o ./Public/css/style.css --watch",
+    "build": "tailwindcss -i ./Public/css/tailwind.css -o ./Public/css/style.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souayrioss/YouBeldi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souayrioss/YouBeldi/issues"
+  },
+  "homepage": "https://github.com/souayrioss/YouBeldi#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
