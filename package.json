@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tailwind": "tailwindcss -i ./Public/css/tailwind.css -o ./Public/css/style.css --watch",
-    "build": "tailwindcss -i ./Public/css/tailwind.css -o ./Public/css/style.css --minify"
+    "minify": "tailwindcss -i ./Public/css/tailwind.css -o ./Public/css/style.css --minify"
   },
   "repository": {
     "type": "git",

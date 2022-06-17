@@ -1,6 +1,5 @@
 <?php require APPROOT .'/views/inc/header.php';?>
 <?php require APPROOT .'/views/inc/navbar.php';?>
-
 <main class="snap-y snap-mandatory h-screen overflow-scroll">
         <section class="snap-start w-screen h-[620px] grid grid-cols-12 content-center items-center">
             <div class="col-start-3 col-end-8" >
