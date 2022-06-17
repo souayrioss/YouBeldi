@@ -11,4 +11,4 @@
 </head>
 <body class="font-sans">
 
-<?php require 'navbar.php';?>
+
