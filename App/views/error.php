@@ -1,20 +1,20 @@
 <?php require APPROOT .'/views/inc/header.php';?>
 
-<section class="bg-black py-[177px] relative z-10">
+<section class="bg-black h-screen relative z-10 flex items-center">
     <div class="container">
-        <div class="flex ">
+        <div class="flex">
             <div class="w-full">
-                <div class="mx-auto max-w-[400px] text-center">
-                <h2 class=" font-extrabold text-white mb-3 text-[50px] sm:text-[80px] md:text-[120px] leading-none " >
+                <div class="mx-auto max-w-[500px] text-center my-auto">
+                <h2 class=" font-extrabold text-white mb-3 text-[50px] sm:text-[90px] md:text-[150px] leading-none " >
                     404
                 </h2>
-                <h4 class="text-white font-semibold text-[22px] leading-tight mb-3 uppercase" >
+                <h4 class="text-white font-semibold text-[24px] leading-tight mb-3 uppercase" >
                     Oops! Cette page est introuvable
                 </h4>
                 <p class="text-sm text-white mb-8 font-light uppercase ">
                     La page que vous recherchez peut-être supprimée
                 </p>
-                <a href="client" class=" text-base font-semibold text-white inline-block text-center border border-white  px-8 py-3 hover:bg-white hover:text-black hover:font-bold transition ">
+                <a href="<?php echo URLROOT ;?>/clients" class=" text-base font-semibold text-white inline-block text-center border border-white  px-8 py-3 hover:bg-white hover:text-black hover:font-bold transition ">
                 Go To Home
                 </a>
                 </div>
