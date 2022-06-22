@@ -128,7 +128,9 @@ class Clients extends Controller {
         $this->view('client/about');
     }
     public function sousDemande(){
-        
+        if (!isset($_SESSION['email'])) {
+            redirect('Clients/login');
+        }
         $this->view('client/sousDemande');
 
     }
@@ -163,5 +165,38 @@ class Clients extends Controller {
     public function profil(){
         $this-> view('client/profil');
         
+    }
+    public function produit($id){
+        if($produit = $this->clientModel->getProduitById($id)){
+            $data = [
+                'produit'=> $produit 
+            ];
+            $this->view('products/produit',$data);
+        }else{
+            $this->view('error');
+        }
+        
+    } 
+    public function femme($categories){
+
+        $produits = $this->clientModel->getCategorieFemme($categories);
+        $data=[
+            'produits' => $produits
+        ];
+        $this->view('products/produits',$data);
+    }
+    public function homme($categories){
+        $data = [
+            'ctg' => $categories,
+        ];
+        $this->view('products/produits' , $data);
+    }
+    public function genre($genre)
+    {
+        $categories=$this->clientModel->getCategorieByGenre($genre);
+        $data = [
+            'categories' => $categories
+        ];
+            $this->view('products/categorie' ,$data);
     }
 }
