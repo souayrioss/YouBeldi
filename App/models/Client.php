@@ -45,4 +45,27 @@ class Client{
         return false;
         }
     }
+    public function getProduitById($id){
+        $this->db->query('SELECT * FROM produit WHERE refPrd = :id ');
+        // Bind values
+        $this->db->bind(':id', $id);
+        // Execute
+        return $this->db->single();
+    }
+    public function getCategorieByGenre($genre){
+        $this->db->query('SELECT * FROM categorie c,genre g WHERE c.genre_id = g.id and g.genre = :genre GROUP by c.idCategorie');
+        // Bind values
+        $this->db->bind(':genre', $genre);
+        // Execute
+        return $this->db->resultSet();
+    }
+    public function getCategorieFemme($ctg)
+    {
+            $this->db->query('SELECT p.nom,p.image,p.prix,p.refPrd FROM produit p ,categorie c WHERE p.categorie = c.idCategorie and c.nomCtg = :ctg and p.genre = :genre ');
+            // Bind values
+            $this->db->bind(':genre', 'femme');
+            $this->db->bind(':ctg', $ctg);
+            // Execute
+            return $this->db->resultSet();
+    }
 }
