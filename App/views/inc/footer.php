@@ -1,4 +1,4 @@
-<footer class="mb-40 w-4/5">
+<footer class="mb-40 w-4/5 mx-auto">
     <div class="flex justify-between w-full">
         <div class="flex gap-5 items-center justify-center">
             <img class="md:h-16" src="<?php echo URLROOT ;?>/img/cash.svg" alt="paiment">
