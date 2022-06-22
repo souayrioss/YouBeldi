@@ -81,6 +81,78 @@
                 </div>
             </div>
             <div class="w-full">
+                <h2>Size</h2>
+                <div class="flex justify-between w-full mb-10 group">
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="xs" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">XS</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="sm" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">SM</label>  
+                </div> 
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="m" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">M</label>  
+                </div>
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="l" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">L</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="xl" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">XL</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="2xl" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">2XL</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="4xl" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">4XL</label>  
+                </div>                 
+                    <?php if(!empty($data['image_err'])):?>
+                        <span class="text-red-500 text-xs"><i class="fa-solid fa-square-xmark"> </i>  <?php  echo $data['image_err']?></span>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="w-full">
+                <h2>Couleurs</h2>
+                <div class="flex justify-between w-full mb-10 group">
+                <div>
+                    <input id="couleur" name="couleur[]" type="checkbox" value="black" class="w-4 h-4 accent-black bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">Noir</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="couleur[]" type="checkbox" value="white" class="w-4 h-4 accent-white bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">Blanc</label>  
+                </div> 
+                <div>
+                    <input id="couleur" name="couleur[]" type="checkbox" value="blue-300" class="w-4 h-4 accent-blue-300 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">Blue</label>  
+                </div>
+                <div>
+                    <input id="couleur" name="couleur[]" type="checkbox" value="red-900" class="w-4 h-4 accent-red-900 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">Rouge</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="couleur[]" type="checkbox" value="green-800" class="w-4 h-4 accent-green-800 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">vers</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="couleur[]" type="checkbox" value="rose-300" class="w-4 h-4 accent-rose-300 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">Rose</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="couleur[]" type="checkbox" value="blue-800" class="w-4 h-4 accent-blue-800 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">Blue</label>  
+                </div>                 
+                    <?php if(!empty($data['image_err'])):?>
+                        <span class="text-red-500 text-xs"><i class="fa-solid fa-square-xmark"> </i>  <?php  echo $data['image_err']?></span>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="w-full">
                 <div class="relative z-0 w-full mb-10 group">
                     <textarea type="text" name="description" id="description" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-300 peer"placeholder=" " required=""> <?php echo $data['produit']->description ?> </textarea>
                     <label for="description" class="peer-focus:font-medium absolute text-sm   duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Description</label>
