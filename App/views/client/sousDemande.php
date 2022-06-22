@@ -19,29 +19,58 @@
                 </div>
             </article>
         </section>
+        <section class="col-start-2 col-end-8 bg-gray-100 p-3 hidden" id ="preTest">
+            <article class="relative  w-full h-[430px] flex flex-col   items-center mt-10">
+                <div class="w-4/5 absolute top-16 text-xl font-medium text-center" >
+                Quelle est votre genre ???
+                </div>
+                <div class="absolute top-60" id="genreBtn">  
+                    <input type="submit" class="uppercase text-base font-semibold text-white inline-block text-center bg-gray-800 border-0  px-10 py-3 mr-5 hover:bg-gray-900" value="homme" >
+                    <input type="submit" class="uppercase text-base font-semibold text-white inline-block text-center bg-gray-800 border-0  px-10 py-3 hover:bg-gray-900 " value="femme">
+                </div>
+            </article>
+        </section>
         <section class="col-start-2 col-end-8 bg-gray-100 p-3 hidden" id ="test">
             <article class="w-full">
                 <div class="flex justify-between mb-1">
                     <span id="num-question" class="text-base font-medium text-blue-700 ">num°</span>
                 </div>
                     <div class="w-full bg-gray-400 rounded-full h-2.5">
-                    <div class="bg-blue-300 h-2.5 rounded-full" style="width: 45%"></div>
+                    <div class="bg-blue-300 h-2.5 rounded-full" id="progress-bar"></div>
                 </div>
             </article>
             <article class="relative  w-full h-[430px] flex flex-col   items-center mt-10">
                 <div class="w-4/5 absolute top-16 text-xl font-medium text-center" id="question">
-                Quelle est votre genre ???
                 </div>
-                <div class="absolute top-60 " id="reponse">  
-                    <input type="submit" class="uppercase text-base font-semibold text-white inline-block text-center bg-gray-800 border-0  px-10 py-3 mr-5 hover:bg-gray-900" value="homme">
-                    <input type="submit" class="uppercase text-base font-semibold text-white inline-block text-center bg-gray-800 border-0  px-10 py-3 hover:bg-gray-900 " value="femme">
+                <div class="absolute top-60 w-1/3" id="reponse">  
                 </div>
                 <div class="w-11/12 absolute top-96 flex justify-between ">
                     <button class="uppercase text-base font-semibold text-white inline-block text-center bg-black border-0  px-20 py-3 hover:bg-gray-900 " id="precedent">Precedent</button>
-                    <button class="uppercase text-base font-semibold text-white inline-block text-center bg-black border-0  px-20 py-3 hover:bg-gray-900 " id="suivant">Suivant</button>
+                    <button class="uppercase text-base font-semibold text-white inline-block  text-center bg-black border-0  px-20 py-3 hover:bg-gray-900 " id="suivant">Suivant</button>
                 </div>
             </article>
         </section>
+        <section class="col-start-2 col-end-8 bg-gray-100 p-3 hidden" id ="resultat">
+            <article class="relative  w-full h-[430px] flex flex-col   items-center mt-10">
+                <div class="w-4/5 absolute top-16 text-xl font-medium ">
+                    <p>Q0-Votre Genre : <spanc class="affResultat"></spanc></p>
+                    <p>Q1-Nom de tissue : <spanc class="affResultat"></spanc></p>
+                    <p>Q2-la categorie : <spanc class="affResultat"></spanc></p>
+                    <p>Q3-Le model : <spanc class="affResultat"></spanc></p>
+                    <p>Q4-la Couleur : <spanc class="affResultat"></spanc></p>
+                    <p>Q5: <spanc class="affResultat"></spanc></p>
+                    <p>Q6: <spanc class="affResultat"></spanc></p>
+                    <p>Q7: <spanc class="affResultat"></spanc></p>
+                    <p>Q8: <spanc class="affResultat"></spanc></p>
+                    <p>Q9: <spanc class="affResultat"></spanc></p>
+                    <p>Q10: <spanc class="affResultat"></spanc></p>
+                </div>
+                <div class="w-11/12 absolute top-96 flex justify-between ">
+                    <form method="POST" action="<?php echo URLROOT ?>/Demandes/addDemande"> <input type="hidden" id="getResult" name="getResult"> <input type="submit" name="addDemade" class="uppercase text-base font-semibold text-white inline-block  text-center bg-black border-0  px-20 py-3 hover:bg-gray-900 " id="envoyer" value="Envoyer"></form>
+                </div>
+            </article>
+        </section>
+
     </main>
 <script src="<?php echo URLROOT ?>/js/sousDemande.js"></script>
 <?php require APPROOT .'/views/inc/footer.php';?>
