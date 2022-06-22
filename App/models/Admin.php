@@ -45,11 +45,5 @@ class Admin{
         return false;
         }
     }
-    public function getProduits(){
-        $this->db->query('SELECT * FROM produit ');
-        // Bind values
-        // Execute
-        return $this->db->resultSet();
 
-    }
 }
