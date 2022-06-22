@@ -2,21 +2,16 @@
 class Produits extends Controller {
     public function __construct()
     {
+        if (!isset($_SESSION['userName'])) {
+            redirect('Admins');
+        }
         $this->produitModel=$this->model('Produit');
     }
     public function index()
     {
         echo 'index produit';
     }
-    public function genre($genre)
-    {
-        $categories=$this->produitModel->getCategorieByGenre($genre);
-        $data = [
-            'categories' => $categories
-        ];
-            $this->view('products/categorie' ,$data);
-    }
-    
+
     public function add(){ 
         if($_SERVER['REQUEST_METHOD'] == "POST"){
             $_POST=filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -26,6 +21,7 @@ class Produits extends Controller {
                 'categorie'=>trim($_POST['categorie']),
                 'genre' => trim($_POST['genre']),
                 'model' => trim($_POST['model']),
+                'size' => json_encode($_POST['size']),
                 'couleur' => json_encode($_POST['couleur']),
                 'prix' => trim($_POST['prix']),
                 'image' => json_encode($_FILES['image']['name']),
@@ -69,9 +65,9 @@ class Produits extends Controller {
                     $length = count($_FILES['image']['tmp_name']);
                     for($i=0 ; $i<$length; $i++ ){
                     $imgName = $_FILES['image']['name'][$i];
-                    move_uploaded_file($_FILES['image']['tmp_name'][$i], "./img/$imgName");
+                    move_uploaded_file($_FILES['image']['tmp_name'][$i], "./img/produit/$imgName");
                     }
-                    redirect('Admins/produits');
+                    redirect('produits/produits');
                 }else{
                 die('something else');
                 }
@@ -108,7 +104,7 @@ class Produits extends Controller {
             // print_r($_POST);
             if(isset($_POST['show'])){
                 $id=$_POST['id'];
-                $produit = $this->produitModel->getProduitsByid($id);
+                $produit = $this->produitModel->getProduitById  ($id);
                 $data=[
                     'produit'=> $produit
                 ];
@@ -121,6 +117,7 @@ class Produits extends Controller {
                     'categorie'=>trim($_POST['categorie']),
                     'genre' => trim($_POST['genre']),
                     'model' => trim($_POST['model']),
+                    'size' => json_encode($_POST['size']),
                     'prix' => trim($_POST['prix']),
                     'image' => json_encode($_FILES['image']['name']),
                     'qteStock' => trim($_POST['qteStock']),
@@ -163,9 +160,9 @@ class Produits extends Controller {
                         $length = count($_FILES['image']['tmp_name']);
                         for($i=0 ; $i<$length; $i++ ){
                         $imgName = $_FILES['image']['name'][$i];
-                        move_uploaded_file($_FILES['image']['tmp_name'][$i], "./img/$imgName");
+                        move_uploaded_file($_FILES['image']['tmp_name'][$i], "./img/produit/$imgName");
                         }
-                        redirect('Admins/produits');
+                        redirect('produits/produits');
                     }else{
                     die('something else');
                     }
@@ -195,8 +192,23 @@ class Produits extends Controller {
     }
     public function delete($id){
         if($this->produitModel->deletePrd($id)){
-            redirect('Admins/produits');
+            redirect('produits/produits');
         }
 
+    }
+    public function dashboard()
+    {
+        $data=[
+            'title'=>'about user'
+        ];
+        $this->view('admin/about',$data);
+
+    }
+    public function produits(){
+        $produits = $this->produitModel->getProduits();
+        $data = [
+            'produits' => $produits,
+        ];
+        $this->view('admin/produits',$data);
     }
 }
