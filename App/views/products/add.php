@@ -21,9 +21,10 @@
                     <?php else: ?>
                         <option selected value="">Categorie de produit</option>
                     <?php endif ?>
-                        <option  value="1">Costume</option>
-                        <option value="2">Djelaba</option>
-                        <option value="3">Gandoura</option>
+                        <option value="3">Costume</option>
+                        <option value="1">Djelaba</option>
+                        <option value="2">Gandoura</option>
+                        <option value="5">Kaftan</option>
                     </select>
                     <?php if(!empty($data['categorie_err'])):?>
                         <span class="text-red-500 text-xs"><i class="fa-solid fa-square-xmark"> </i>  <?php  echo $data['categorie_err']?></span>
@@ -74,6 +75,42 @@
                 <div class="relative z-0 w-full mb-10 group">
                     <input type="file" name="image[]" id="image" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-300 peer" value="" placeholder=" " ="" multiple="multiple">
                     <label for="image" class="peer-focus:font-medium absolute text-sm   duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-300  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Images</label>
+                    <?php if(!empty($data['image_err'])):?>
+                        <span class="text-red-500 text-xs"><i class="fa-solid fa-square-xmark"> </i>  <?php  echo $data['image_err']?></span>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="w-full">
+                <h2>Size</h2>
+                <div class="flex justify-between w-full mb-10 group">
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="xs" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">XS</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="sm" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">SM</label>  
+                </div> 
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="m" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">M</label>  
+                </div>
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="l" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">L</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="xl" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">XL</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="2xl" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">2XL</label>  
+                </div>  
+                <div>
+                    <input id="couleur" name="size[]" type="checkbox" value="4xl" class="w-4 h-4 accent-gray-500 bg-gray-700 border-blue-500  focus:outline-none " checked>
+                    <label for="couleur" class="ml-2 text-xs font-medium text-gray-900  w-2/3">4XL</label>  
+                </div>                 
                     <?php if(!empty($data['image_err'])):?>
                         <span class="text-red-500 text-xs"><i class="fa-solid fa-square-xmark"> </i>  <?php  echo $data['image_err']?></span>
                     <?php endif; ?>
