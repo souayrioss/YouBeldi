@@ -55,21 +55,14 @@ class Admins extends Controller {
         $_SESSION['id'] = $admin->id;
         $_SESSION['userName'] = $admin->userName;
         $_SESSION['role'] = $admin->role;
-        redirect('admins/dashboard');
+        redirect('Produits/dashboard');
     }
-    public function dashboard()
-    {
-        $data=[
-            'title'=>'about user'
-        ];
-        $this->view('admin/about',$data);
+    public function logout(){
+            unset($_SESSION['id']);
+            unset($_SESSION['userName']);
+            unset($_SESSION['role']);
+            session_destroy();
+            redirect('admins');
+    }
 
-    }
-    public function produits(){
-        $produits = $this->adminModel->getProduits();
-        $data = [
-            'produits' => $produits,
-        ];
-        $this->view('admin/produits',$data);
-    }
 }
