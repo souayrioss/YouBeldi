@@ -7,13 +7,14 @@ class Produit{
         $this->db = new Database;
     }
     public function add($data){
-        $this->db->query('INSERT INTO produit (nom,description, categorie, genre,model,couleur, prix, qteStock,image) VALUES(:nom,:description, :categorie, :genre ,:model,:couleur, :prix, :qteStock,:image)');
+        $this->db->query('INSERT INTO produit (nom,description, categorie, genre,model,size,couleur, prix, qteStock,image) VALUES(:nom,:description, :categorie, :genre ,:model,:size,:couleur, :prix, :qteStock,:image)');
         // Bind values
         $this->db->bind(':nom', $data['nom']);
         $this->db->bind(':description', $data['description']);
         $this->db->bind(':categorie', $data['categorie']);
         $this->db->bind(':genre', $data['genre']);
         $this->db->bind(':model', $data['model']);
+        $this->db->bind(':size', $data['size']);
         $this->db->bind(':couleur', $data['couleur']);
         $this->db->bind(':prix', $data['prix']);
         $this->db->bind(':qteStock', $data['qteStock']);
@@ -28,7 +29,7 @@ class Produit{
     }
     public function update($data){
 
-        $this->db->query("UPDATE produit SET nom=:nom,description=:description,categorie=:categorie,genre=:genre,model=:model,prix=:prix,qteStock=:qteStock,image=:image  WHERE refPrd = :refPrd");
+        $this->db->query("UPDATE produit SET nom=:nom,description=:description,categorie=:categorie,genre=:genre,model=:model,size=:size,prix=:prix,qteStock=:qteStock,image=:image  WHERE refPrd = :refPrd");
         // Bind values
         $this->db->bind(':refPrd', $data['refPrd']);
         $this->db->bind(':nom', $data['nom']);
@@ -36,6 +37,7 @@ class Produit{
         $this->db->bind(':categorie', $data['categorie']);
         $this->db->bind(':genre', $data['genre']);
         $this->db->bind(':model', $data['model']);
+        $this->db->bind(':size', $data['size']);
         $this->db->bind(':prix', $data['prix']);
         $this->db->bind(':qteStock', $data['qteStock']);
         $this->db->bind(':image', $data['image']);
@@ -47,7 +49,7 @@ class Produit{
             return false;
         }
     }
-    public function getProduitsByid($id){
+    public function getProduitById($id){
         $this->db->query('SELECT * FROM produit WHERE refPrd = :id ');
         // Bind values
         $this->db->bind(':id', $id);
@@ -71,5 +73,12 @@ class Produit{
         } else {
             return false;
         }
+    }
+    public function getProduits(){
+        $this->db->query('SELECT * FROM produit ');
+        // Bind values
+        // Execute
+        return $this->db->resultSet();
+
     }
 }
