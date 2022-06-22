@@ -7,16 +7,16 @@
             <?php if(isset($_SESSION['id'])): ?>
             <a class="uppercase text-base  font-medium" href="<?php echo URLROOT ;?>/clients/profil">Bonjour Mr.<span class="text-sm font-extrabold"><?php echo $_SESSION['userName'] ;?></span></a>
             <?php else: ?>
-                <a class="uppercase text-sm " href="<?= URLROOT ;?>/clients/login">Se connecter</a>
+                <a class="uppercase text-sm " href="<?= URLROOT ;?>/Admins">Se connecter</a>
             <?php endif ?>
         </div>
         <div class=" w-full h-full  flex flex-col justify-start items-center  ">
             <ul class=" relative h-full w-2/3 flex flex-col justify-start gap-10 mt-4  md:font-normal ">
                 <li>
-                <a href="<?php echo URLROOT ;?>admins/da" class="uppercase text-base text-blue-30 hover:text-blue-500">Accueil</a>
+                <a href="<?php echo URLROOT ;?>/Produits/dashboard" class="uppercase text-base text-blue-30 hover:text-blue-500">Accueil</a>
                 </li>
                 <li>
-                <a href="<?php echo URLROOT ;?>/Admins/Produits" class="uppercase text-base text-blue-300 hover:text-blue-500">produits</a>
+                <a href="<?php echo URLROOT ;?>/Produits/Produits" class="uppercase text-base text-blue-300 hover:text-blue-500">produits</a>
                 </li>
                 <li>
                 <a href="<?php echo URLROOT ;?>" class="uppercase text-base text-blue-300 hover:text-blue-500">commandes</a>
@@ -25,7 +25,7 @@
                 <a href="<?php echo URLROOT ;?>" class="uppercase text-base text-blue-300 hover:text-blue-500">demandes</a>
                 </li>
                 <li class="absolute bottom-8">
-                    <a href="<?php echo URLROOT ;?>" class="uppercase text-base text-blue-300 hover:text-blue-500">se déconnecter</a>
+                    <a href="<?php echo URLROOT ;?>/Admins/Logout" class="uppercase text-base text-blue-300 hover:text-blue-500">se déconnecter</a>
                 </li>
             </ul>
         </div>
