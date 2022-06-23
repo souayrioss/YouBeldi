@@ -55,7 +55,7 @@ class Admins extends Controller {
         $_SESSION['id'] = $admin->id;
         $_SESSION['userName'] = $admin->userName;
         $_SESSION['role'] = $admin->role;
-        redirect('Produits/dashboard');
+        redirect('contacts/getContacts');
     }
     public function logout(){
             unset($_SESSION['id']);
