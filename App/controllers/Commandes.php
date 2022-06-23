@@ -27,6 +27,13 @@ class Commandes extends Controller {
             }
         }
     
+        }
     }
-}
+    public function getComandes(){
+        $Comandes = $this->commandeModel->getComandes();
+        $data = [
+            'commandes' => $Comandes,
+        ];
+        $this->view('admin/commande',$data);
+    }
 }

@@ -13,16 +13,16 @@
         <div class=" w-full h-full  flex flex-col justify-start items-center  ">
             <ul class=" relative h-full w-2/3 flex flex-col justify-start gap-10 mt-4  md:font-normal ">
                 <li>
-                <a href="<?php echo URLROOT ;?>/Produits/dashboard" class="uppercase text-base text-blue-30 hover:text-blue-500">Accueil</a>
+                <a href="<?php echo URLROOT ;?>/contacts/getContacts" class="uppercase text-base text-blue-30 hover:text-blue-500">Accueil</a>
                 </li>
                 <li>
                 <a href="<?php echo URLROOT ;?>/Produits/Produits" class="uppercase text-base text-blue-300 hover:text-blue-500">produits</a>
                 </li>
                 <li>
-                <a href="<?php echo URLROOT ;?>" class="uppercase text-base text-blue-300 hover:text-blue-500">commandes</a>
+                <a href="<?php echo URLROOT ;?>/Commandes/getComandes" class="uppercase text-base text-blue-300 hover:text-blue-500">commandes</a>
                 </li>
                 <li>
-                <a href="<?php echo URLROOT ;?>" class="uppercase text-base text-blue-300 hover:text-blue-500">demandes</a>
+                <a href="<?php echo URLROOT ;?>/Demandes/getDemandes" class="uppercase text-base text-blue-300 hover:text-blue-500">demandes</a>
                 </li>
                 <li class="absolute bottom-8">
                     <a href="<?php echo URLROOT ;?>/Admins/Logout" class="uppercase text-base text-blue-300 hover:text-blue-500">se déconnecter</a>

@@ -8,10 +8,14 @@ class Demandes extends Controller {
         $id = $_SESSION['id'];
         $demande=$_POST['getResult'];
         if($this->demandeModel->addDemande($id,$demande)){
-            echo 'yeeeees';
+            redirect('Clients');
         }
-        // print_r($_POST);
-        // $result = json_decode($_POST['getResult']);
-        // print_r($result);
+    }
+    public function getDemandes(){
+        $Demandes = $this->demandeModel->getDemandes();
+        $data = [
+            'demandes' => $Demandes,
+        ];
+        $this->view('admin/demande',$data);
     }
 }

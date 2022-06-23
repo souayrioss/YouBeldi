@@ -51,40 +51,32 @@
             </section>
             <section class="snap-start w-screen flex-shrink-0 h-[620px] grid grid-cols-12 content-center items-center">
                 <div class="col-start-2 col-end-7">
-                    <img class=""  src="<?php echo URLROOT ;?>/img/service.png" alt="Service">
+                    <img class=""  src="<?php echo URLROOT ;?>/img/equipe.jpg" alt="Service">
                 </div>
                 <div class="col-start-8 col-end-12" >
-                    <h2 class="uppercase text-5xl font-extrabold  mb-12">service</h2>
-                    <span class=" text-lg font-light text-gray-500">Notre service client est un des piliers de notre stratégie d’entreprise. La réactivité est le leitmotiv de notre organisation. Quel que soit votre besoin, vous êtes assuré d’avoir un interlocuteur disponible pour vous appuyer dans vos démarches.</span>
+                    <h2 class="uppercase text-5xl font-extrabold  mb-12">PDG</h2>
+                    <span class=" text-lg font-light text-gray-500">Le président-directeur général est le dirigeant de plus haut rang dans une société anonyme fonctionnant sous un système moniste,.</span>
                 </div>
             </section>
             <section class="snap-start flex-shrink-0 w-screen h-[620px] grid grid-cols-12 content-center items-center">
                 <div class="col-start-2 col-end-6 " >
-                    <h2 class="uppercase text-5xl font-extrabold  mb-12">qualité</h2>
-                    <span class=" text-lg font-light text-gray-500">La démarche qualité est un des leviers nous permettant d’améliorer notre fonctionnement et notre savoir-faire. Notre équipe peut ainsi travailler dans des conditions optimales afin de vous fournir  des produits hautement qualité.</span>
+                    <h2 class="uppercase text-5xl font-extrabold  mb-12">Chef des ventes</h2>
+                    <span class=" text-lg font-light text-gray-500">Affilié à la direction commerciale et au directeur commercial, le chef des ventes est responsable de l’équipe commerciale sur un secteur géographique (souvent régional) ou une gamme de produits précis. Son objectif est d’augmenter les ventes de l’entreprise. Véritable chef d’orchestre, il organise les objectifs de chacun, participe aux actions commerciales et remonte à la direction les performances de son périmètre géographique.</span>
                 </div>
                 <div class="col-start-7 col-end-12 ">
-                    <img class=""  src="<?php echo URLROOT ;?>/img/qualite.png" alt="qualite">
+                    <img class=""  src="<?php echo URLROOT ;?>/img/equipe.jpg" alt="qualite">
                 </div>
             </section>
             <section class="snap-start flex-shrink-0 w-screen h-[620px] grid grid-cols-12 content-center items-center">
                 <div class="col-start-2 col-end-7">
-                    <img class=""  src="<?php echo URLROOT ;?>/img/vitesse.png" alt="vitesse">
+                    <img class=""  src="<?php echo URLROOT ;?>/img/equipe.jpg" alt="vitesse">
                 </div>
                 <div class="col-start-8 col-end-12" >
-                    <h2 class="uppercase text-5xl font-extrabold  mb-12">vitesse</h2>
-                    <span class=" text-lg font-light text-gray-500">Conclure une bonne affaire en commerce est souvent une question de rapidité. La puissance de nos applications va vous permettre de collecter les informations dont vous avez besoin pour acquérir une produits en un temps inégalé jusqu’à présent.</span>
+                    <h2 class="uppercase text-5xl font-extrabold  mb-12">Développeur </h2>
+                    <span class=" text-lg font-light text-gray-500">Le développeur web réalise l’ensemble des fonctionnalités techniques d’un site ou d'une application web. Technicien ou ingénieur, il ou elle conçoit des sites sur mesure ou adapte des solutions techniques existantes en fonction du projet et de la demande du client. </span>
                 </div>
             </section>
-            <section class="snap-start flex-shrink-0 w-screen h-[620px] grid grid-cols-12 content-center items-center">
-                <div class="col-start-2 col-end-6 ">
-                    <h2 class="uppercase text-5xl font-extrabold  mb-12">innovation</h2>
-                    <span class=" text-lg font-light text-gray-500">L'innovation permet à toute entreprise de perdurer dans le temps. Dans tous les domaines, les innovations vont bon train. Bientôt la blockchain sera appliqué aux transactions commerciales. Notre ambition est de rester à la pointe de l'innovation.</span>
-                </div>
-                <div class="col-start-7 col-end-12 ">
-                    <img class=""  src="<?php echo URLROOT ;?>/img/inovation.png" alt="">
-                </div>
-            </section>
+
         </div>
         </section>
         <section class="snap-start w-screen h-screen flex items-center justify-center">

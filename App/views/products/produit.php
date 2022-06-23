@@ -10,7 +10,7 @@
       <div class="hidden aspect-w-3 aspect-h-4  overflow-hidden lg:block">
         <img class="w-full h-[510px]" class="" src="<?php echo URLROOT ;?>/img/produit/<?php echo $images[0] ?>" alt="" />
       </div>
-      <div class="aspect-w-4 aspect-h-5  sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4">
+      <div class="hidden aspect-w-3 aspect-h-4  overflow-hidden lg:block">
       <img class="w-full h-[510px]" class="" src="<?php echo URLROOT ;?>/img/produit/<?php echo $images[1] ?>" alt="" />
       </div>
       <div class="aspect-w-4 aspect-h-5  sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4">
