@@ -4,7 +4,7 @@
             <img class="md:h-16" src="<?php echo URLROOT ;?>/img/cash.svg" alt="paiment">
             <div>
                 <h3 class="font-semibold text-xl">Paiement à la livraison</h3>
-                <span class="font-light ">Livraison gratuite à partir de 499 MAD</span>
+                <span class="font-light ">Livraison gratuite à partir de 0,99 MAD</span>
             </div>
         </div>
         <div class="flex gap-5 items-center justify-center">

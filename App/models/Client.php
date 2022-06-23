@@ -68,4 +68,26 @@ class Client{
             // Execute
             return $this->db->resultSet();
     }
+    public function getCategorieHomme($ctg)
+    {
+            $this->db->query('SELECT p.nom,p.image,p.prix,p.refPrd FROM produit p ,categorie c WHERE p.categorie = c.idCategorie and c.nomCtg = :ctg and p.genre = :genre ');
+            // Bind values
+            $this->db->bind(':genre', 'homme');
+            $this->db->bind(':ctg', $ctg);
+            // Execute
+            return $this->db->resultSet();
+    }
+    public function getNPrdFemme(){
+        $this->db->query('SELECT * FROM `produit` WHERE `genre` = :genre ORDER by `created_at` DESC LIMIT 7');
+        // Execute
+        $this->db->bind(':genre', 'femme');
+        return $this->db->resultSet();
+    }
+    public function getNPrdHomme(){
+        $this->db->query('SELECT * FROM `produit` WHERE `genre` = :genre ORDER by `created_at` DESC LIMIT 7');
+        // Execute
+        $this->db->bind(':genre', 'homme');
+        return $this->db->resultSet();
+
+    }
 }

@@ -58,12 +58,12 @@
                     <p>Q2-la categorie : <spanc class="affResultat"></spanc></p>
                     <p>Q3-Le model : <spanc class="affResultat"></spanc></p>
                     <p>Q4-la Couleur : <spanc class="affResultat"></spanc></p>
-                    <p>Q5: <spanc class="affResultat"></spanc></p>
-                    <p>Q6: <spanc class="affResultat"></spanc></p>
-                    <p>Q7: <spanc class="affResultat"></spanc></p>
-                    <p>Q8: <spanc class="affResultat"></spanc></p>
-                    <p>Q9: <spanc class="affResultat"></spanc></p>
-                    <p>Q10: <spanc class="affResultat"></spanc></p>
+                    <p>Q5-longueur d’épaule: <spanc class="affResultat"></spanc></p>
+                    <p>Q6-longueur de pointe : <spanc class="affResultat"></spanc></p>
+                    <p>Q7-circonférence du biceps: <spanc class="affResultat"></spanc></p>
+                    <p>Q8-distance du poignet: <spanc class="affResultat"></spanc></p>
+                    <p>Q9-longueur de pantalon: <spanc class="affResultat"></spanc></p>
+                    <p>Q10-hauteur totale: <spanc class="affResultat"></spanc></p>
                 </div>
                 <div class="w-11/12 absolute top-96 flex justify-between ">
                     <form method="POST" action="<?php echo URLROOT ?>/Demandes/addDemande"> <input type="hidden" id="getResult" name="getResult"> <input type="submit" name="addDemade" class="uppercase text-base font-semibold text-white inline-block  text-center bg-black border-0  px-20 py-3 hover:bg-gray-900 " id="envoyer" value="Envoyer"></form>

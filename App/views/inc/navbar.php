@@ -5,7 +5,7 @@
     <div class="grid grid-rows-2 col-span-4 gap-5">
         <div  class="flex  justify-between row-start-1 col-start-4 ">
             <form action="">
-                <input class="border-b-2 border-black focus:outline-none px-2" type="text" name="searche" placeholder="RECHERCHER">
+                <a href=""  class="uppercase cursor-pointer text-base font-semibold border-b-2 border-black">Recherche <span class=""><i class="fa-solid fa-magnifying-glass ml-10"></i> </span></a>
             </form>
             <div class="gap-5">
                 <?php if(isset($_SESSION['id'])): ?>

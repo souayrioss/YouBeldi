@@ -21,5 +21,9 @@ class Commande{
             return false;
         }
     }
-
+    public function getComandes(){
+        $this->db->query('SELECT * FROM commande c INNER JOIN client cl ON c.refCl =cl.id   ORDER BY `created_at` DESC');
+        return $this->db->resultSet();
+    
+}
 }

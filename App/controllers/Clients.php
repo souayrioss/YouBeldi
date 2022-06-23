@@ -7,9 +7,12 @@ class Clients extends Controller {
         $this->clientModel=$this->model('Client');
     }
     public function index(){
+        $prdFem = $this->clientModel->getNPrdFemme();
+        $prdHom = $this->clientModel->getNPrdHomme();
+
         $data = [
-            'title' => 'CLient',
-            '2'=>'me'
+            'prdFems' => $prdFem,
+            'prdHoms' => $prdHom
         ];
         $this->view('client/index',$data);
     }
@@ -186,8 +189,10 @@ class Clients extends Controller {
         $this->view('products/produits',$data);
     }
     public function homme($categories){
+        $produits = $this->clientModel->getCategorieHomme($categories);
+
         $data = [
-            'ctg' => $categories,
+            'produits' => $produits,
         ];
         $this->view('products/produits' , $data);
     }

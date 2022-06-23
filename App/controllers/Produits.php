@@ -7,10 +7,6 @@ class Produits extends Controller {
         }
         $this->produitModel=$this->model('Produit');
     }
-    public function index()
-    {
-        echo 'index produit';
-    }
 
     public function add(){ 
         if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -194,14 +190,6 @@ class Produits extends Controller {
         if($this->produitModel->deletePrd($id)){
             redirect('produits/produits');
         }
-
-    }
-    public function dashboard()
-    {
-        $data=[
-            'title'=>'about user'
-        ];
-        $this->view('admin/about',$data);
 
     }
     public function produits(){
